@@ -13,6 +13,7 @@ You can view live results here: http://joncraton.org/lego-by-pound
 
 # Getting started
 
-Run __main__.py. 
+1. Copy ebay.apikey.example to ebay.apikey and add your keys.
+2. Run `__main__.py`
 
 This is configured to output a static list of items to stdout. It is actually a small web.py applications with only a single page. It could easily be expanded to run as a proper web application.
