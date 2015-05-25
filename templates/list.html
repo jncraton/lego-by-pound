@@ -1,0 +1,29 @@
+$def with (items)
+
+<div>
+<h1>LEGO by the pound</h1>
+
+<p>Compiled from US eBay listings. Price per pound is calculated based on number of pounds listed in the item title. Excludes listings at more than $$10 per pound. Prices are approximate if the listing uses calculated shipping.
+
+<p>Updated every 5 minutes.
+
+<table>
+<tr>
+    <th>End Time</th>
+    <th>Listing</th>
+    <th>Per Pound</th>
+    <th>Total</th>
+    <th>Weight</th>
+</tr>
+$for item in items:
+    <tr>
+        <td>$item['end_time']</td>
+        <td><a href="$item['viewItemURL'][0]">$item['title']</a></td>
+        <td>$$$item['price_per_pound']</td>
+        <td>$$$item['total_price']</td>
+        <td>$item['weight'] lbs</td>
+        <!--<td>$item['price']</td>
+        <td>$item['shipping_price']</td>-->
+    </tr>
+</table>
+</div>

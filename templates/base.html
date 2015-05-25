@@ -1,0 +1,37 @@
+$def with (content)
+<html>
+<head>
+<style>
+body {
+    width: 900px;
+    margin: auto;
+}
+img,table,pre {
+    max-width:900px;
+}
+iframe {
+    width:900px;
+    height: 85%;
+}
+pre {
+    white-space: pre-wrap;
+}
+table { 
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+th,td {
+    border: 1px solid;
+    padding: 8px;
+    cell-spacing:0px;
+}
+input {
+    font-size:24px;
+}
+</style>
+</head>
+
+<body>
+$:content
+</body>
+</html>
