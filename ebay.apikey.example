@@ -1,0 +1,17 @@
+[keys]
+#Your secret Ebay access keys.
+#Generate the keys on: developer.ebay.com
+dev_name = 
+app_name = 
+cert_name = 
+
+[call]
+# US:      siteid = 0,  global_id = EBAY-US
+# Germany: siteid = 77, global_id = EBAY-DE
+# See: http://developer.ebay.com/devzone/finding/Concepts/SiteIDToGlobalID.html
+siteid = 0
+global_id = EBAY-US
+compatibility_level = 863
+
+[endpoints]
+finding = http://svcs.ebay.com/services/search/FindingService/v1
