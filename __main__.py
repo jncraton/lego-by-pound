@@ -17,7 +17,7 @@ render = web.template.render('templates/',base='base',globals={
 class list:
     def GET(self):
         response = json.loads(findItemsAdvanced(
-            keywords='lego lbs',
+            keywords='lego lbs -mega',
             sortOrder = 'EndTimeSoonest',
         ))
         
