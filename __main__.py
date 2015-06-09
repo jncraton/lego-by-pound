@@ -25,7 +25,7 @@ class list:
         results = page['searchResult'][0]
         items = results['item']
 
-        lbs_match = re.compile('.*?([0-9\.]+)[ +]*(lb|pound)',re.I)
+        lbs_match = re.compile('.*?([0-9\.\-]+)[ +]*(lb|pound)',re.I)
         
         items_list = []
 
@@ -46,6 +46,7 @@ class list:
             # Weight
             try:
                 item['weight'] = lbs_match.match(item['title']).group(1)
+                item['weight'] = item['weight'].split('-')[0]
             except:
                 item['weight'] = None
             
@@ -60,7 +61,8 @@ class list:
                     item['shipping_price'] = item['shippingInfo'][0]['shippingServiceCost'][0]['__value__']
             except:
                 item['shipping_price'] = None
-                
+            
+            # Price
             try:
                 item['total_price'] = float(item['shipping_price']) + float(item['price'])
                 item['price_per_pound'] = item['total_price'] / float(item['weight'])
