@@ -1,5 +1,7 @@
 # lego-by-pound: List LEGO by the pound
 
+![screenshot](lego-by-pound.png)
+
 Here's what this application does:
 
 1. Grabs the upcoming US Ebay listings for "LEGO lbs".
